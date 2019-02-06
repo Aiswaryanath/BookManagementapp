@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BookManagementapp</string>
+    <string-array name="departmentlist">
+        <item>MCA</item>
+        <item>MBA</item>
+        <item>AME</item>
+    </string-array>
+</resources>

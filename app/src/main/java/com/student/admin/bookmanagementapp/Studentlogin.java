@@ -1,5 +1,6 @@
 package com.student.admin.bookmanagementapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,8 @@ EditText ed1,ed2;
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),StudentregisterActivity.class);
+                startActivity(i);
 
             }
         });

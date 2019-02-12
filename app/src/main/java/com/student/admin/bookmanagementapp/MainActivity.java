@@ -1,5 +1,6 @@
 package com.student.admin.bookmanagementapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,12 +17,15 @@ Button b,b1;
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i=new Intent(getApplicationContext(),Studentlogin.class);
+                startActivity(i);
             }
         });
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
 
             }
         });

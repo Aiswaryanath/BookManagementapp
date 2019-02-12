@@ -1,19 +1,33 @@
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="#58b3bc"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:layout_height="match_parent"
         android:background="#58b3bc"
         android:layout_width="match_parent"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android">
-
+     <ImageView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+         android:background="@drawable/circleshape"
+         android:layout_gravity="center"
+       android:src="@drawable/bookspng" />
 
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="STUDENTLOGIN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/studentlogin" />
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="ADMINLOGIN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

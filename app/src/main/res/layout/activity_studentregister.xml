@@ -64,11 +64,8 @@
             android:id="@+id/password"
             android:inputType="textPassword"/>
 
-
-
-
         <Button
-            android:text="REGISTER"
+            android:text="SUBMIT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/register" />

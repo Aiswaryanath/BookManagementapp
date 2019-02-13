@@ -5,4 +5,8 @@
         <item>MBA</item>
         <item>AME</item>
     </string-array>
+    <string-array name="bookstatus">
+        <item>available</item>
+        <item>unavailable</item>
+    </string-array>
 </resources>

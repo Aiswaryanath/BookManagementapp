@@ -1,0 +1,58 @@
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_height="match_parent"
+        android:background="#1565C0"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:text="BOOKNAME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookname"
+            android:inputType="text"/>
+
+        <Button
+            android:text="SEARCH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search" />
+        <TextView
+            android:text="BOOKID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookid"
+            />
+
+        <TextView
+            android:text="BOOKAUTHOR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookauthor"
+            android:inputType="text"/>
+        <TextView
+            android:visibility="invisible"
+            android:text="BOOKSTATUS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:visibility="invisible"
+            android:id="@+id/status"
+            android:entries="@array/bookstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+
+
+    </LinearLayout>
+</ScrollView>

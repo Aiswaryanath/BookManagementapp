@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".Studentlogin" />
         <activity android:name=".StudentregisterActivity" />
+        <activity android:name=".BooksearchActivity" />
+        <activity android:name=".BooksearchstdActivity"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.student.admin.bookmanagementapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,9 +48,9 @@ s=sp.getSelectedItem().toString();
                 boolean status=bookHelper.insertData(s1,s2,s3,s4,s5,s);
                 if (status == true) {
 
-                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "error in registration", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -57,7 +58,8 @@ s=sp.getSelectedItem().toString();
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
             }
         });
     }

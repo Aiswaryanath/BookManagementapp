@@ -24,7 +24,7 @@ public class BookHelper extends SQLiteOpenHelper {
     public static final String col02 = "bookid";
     public static final String col03 = "bookname";
     public static final String col04 = "bookauthor";
-    public static final String col05 = "bookstatus";
+//    public static final String col05 = "bookstatus";
 
     public BookHelper(Context context) {
         super(context, Dbname, null, 1);
@@ -34,7 +34,7 @@ public class BookHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String query = "create table " + TableName + "(" + col1 + " integer primary key autoincrement," + col2 + " text," + col3 + " text," + col4 + " text," + col5 + " text," + col6 + " text," + col7 +" text)";
         sqLiteDatabase.execSQL(query);
-        String query1 = "create table " + TableName1 + "(" + col01 + " integer primary key autoincrement," + col02 + " text," + col03 + " text," + col04 + " text," + col05 + " text)";
+        String query1 = "create table " + TableName1 + "(" + col01 + " integer primary key autoincrement," + col02 + " text," + col03 + " text," + col04 + " text)";
         sqLiteDatabase.execSQL(query);
     }
 
@@ -65,13 +65,13 @@ public class BookHelper extends SQLiteOpenHelper {
             return true;
         }
     }
-    public boolean insertData1(String bookid,String bookname,String bookauthor,String bookstatus){
+    public boolean insertData1(String bookid,String bookname,String bookauthor){
         SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(col02,bookid);
         cv.put(col03,bookname);
         cv.put(col04,bookauthor);
-        cv.put(col05,bookstatus);
+//        cv.put(col05,bookstatus);
 
         long status=sqLiteDatabase.insert(TableName1,null,cv);
         if (status==-1)

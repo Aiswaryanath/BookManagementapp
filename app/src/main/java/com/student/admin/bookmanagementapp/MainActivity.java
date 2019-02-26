@@ -24,6 +24,8 @@ Button b,b1;
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),BooksearchActivity.class);
+                startActivity(i);
 
 
 

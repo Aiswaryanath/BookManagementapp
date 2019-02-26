@@ -23,6 +23,8 @@ EditText ed1,ed2;
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),BooksearchstdActivity.class);
+                startActivity(i);
 
             }
         });

@@ -39,7 +39,7 @@ public class BooksearchstdActivity extends AppCompatActivity {
                 } else {
                     while (cursor.moveToNext()) {
 //                        s1 = cursor.getString(2);
-                        s2 = cursor.getString(1);
+                        s2 = cursor.getString(0);
                         s3 = cursor.getString(3);
 
 //                        Toast.makeText(getApplicationContext(), s1, Toast.LENGTH_LONG).show();

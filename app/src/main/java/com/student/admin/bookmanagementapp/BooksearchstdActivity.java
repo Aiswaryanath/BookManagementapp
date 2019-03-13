@@ -13,14 +13,14 @@ import android.widget.Toast;
 public class BooksearchstdActivity extends AppCompatActivity {
     Button b;
     EditText ed1,ed2,ed3;
-    String s1,s2,s3,s;
+    String s1,s2,s3,s,getid;
     BookHelper bookHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booksearchstd);
-        ed1=(EditText)findViewById(R.id.bookid);
-        ed2=(EditText)findViewById(R.id.bookname);
+        ed1=(EditText)findViewById(R.id.bookname);
+        ed2=(EditText)findViewById(R.id.bookid);
         ed3=(EditText)findViewById(R.id.bookauthor);
         bookHelper=new BookHelper(this);
         bookHelper.getWritableDatabase();
@@ -31,26 +31,28 @@ public class BooksearchstdActivity extends AppCompatActivity {
                 s1 = ed1.getText().toString();
                 s2 = ed2.getText().toString();
                 s3 = ed3.getText().toString();
-                Log.d("bookid", s1);
-                Log.d("bookname", s2);
-                Log.d("bookauthor", s3);
-                Cursor cursor = bookHelper.SearchData(s2);
+                Log.d("bookname", s1);
+
+                Cursor cursor = bookHelper.SearchData(s1);
                 if (cursor.getCount() == 0) {
                     Toast.makeText(getApplicationContext(), "No Name Found", Toast.LENGTH_LONG).show();
                 } else {
                     while (cursor.moveToNext()) {
-                        s1 = cursor.getString(1);
+//                        s1 = cursor.getString(2);
+                        s2 = cursor.getString(1);
                         s3 = cursor.getString(3);
 
-                        Toast.makeText(getApplicationContext(), s1, Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(), s1, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), s2, Toast.LENGTH_LONG).show();
                         Toast.makeText(getApplicationContext(), s3, Toast.LENGTH_LONG).show();
 
-                        ed2.setText(s1);
+                        ed2.setText(s2);
                         ed3.setText(s3);
 
 
-                        s2 = cursor.getString(0);
-                        Toast.makeText(getApplicationContext(), s2, Toast.LENGTH_LONG).show();
+
+                        getid=cursor.getString(0);
+                        Toast.makeText(getApplicationContext(),getid,Toast.LENGTH_LONG).show();
 
                     }
 

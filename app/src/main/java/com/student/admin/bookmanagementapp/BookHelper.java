@@ -35,7 +35,7 @@ public class BookHelper extends SQLiteOpenHelper {
         String query = "create table " + TableName + "(" + col1 + " integer primary key autoincrement," + col2 + " text," + col3 + " text," + col4 + " text," + col5 + " text," + col6 + " text," + col7 +" text)";
         sqLiteDatabase.execSQL(query);
         String query1 = "create table " + TableName1 + "(" + col01 + " integer primary key autoincrement," + col02 + " text," + col03 + " text," + col04 + " text)";
-        sqLiteDatabase.execSQL(query);
+        sqLiteDatabase.execSQL(query1);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class BookHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(query);
         onCreate(sqLiteDatabase);
         String query1 = "drop table if exists " + TableName1;
-        sqLiteDatabase.execSQL(query);
+        sqLiteDatabase.execSQL(query1);
         onCreate(sqLiteDatabase);
 
     }

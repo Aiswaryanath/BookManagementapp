@@ -6,15 +6,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android">
-        <TextView
-            android:text="BOOKID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookid"
-           />
+
         <TextView
             android:text="BOOKNAME"
             android:layout_width="match_parent"
@@ -24,6 +16,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/bookname"
             android:inputType="text"/>
+        <Button
+            android:text="SEARCH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search" />
+
+        <TextView
+            android:text="BOOKID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookid"
+            />
 
         <TextView
             android:text="BOOKAUTHOR"
@@ -38,22 +45,23 @@
             android:text="BOOKSTATUS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-<Spinner
-    android:id="@+id/status"
-    android:entries="@array/bookstatus"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"></Spinner>
-        <Button
-            android:text="SUBMIT"
+        <Spinner
+            android:id="@+id/status"
+            android:entries="@array/bookstatus"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/submit" />
-        <Button
-            android:text="SEARCH"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/search" />
+            android:layout_height="wrap_content"></Spinner>
 
+
+        <Button
+            android:text="EDIT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit" />
+        <Button
+            android:text="REMOVE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete" />
         <Button
             android:text="BACK"
             android:layout_width="match_parent"
@@ -65,7 +73,7 @@
             android:layout_height="100dp"
 
             android:layout_gravity="center"
-             />
+            />
 
     </LinearLayout>
 </ScrollView>

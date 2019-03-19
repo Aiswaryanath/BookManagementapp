@@ -8,26 +8,28 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-public class BooksearchstdActivity extends AppCompatActivity {
-    Button b,b1;
+public class AdminsearchActivity extends AppCompatActivity {
     EditText ed1,ed2,ed3;
-    String s1,s2,s3,s,getid;
+    Button b1,b2,b3,b4;
+    String s1,s2,s3,getid,getbookid,getbookauthor;
     BookHelper bookHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booksearchstd);
-        ed1=(EditText)findViewById(R.id.bookname);
-        ed2=(EditText)findViewById(R.id.bookid);
+        setContentView(R.layout.activity_adminsearch);
+        setContentView(R.layout.activity_booksearch);
+        ed1=(EditText)findViewById(R.id.bookid);
+        ed2=(EditText)findViewById(R.id.bookname);
         ed3=(EditText)findViewById(R.id.bookauthor);
         bookHelper=new BookHelper(this);
         bookHelper.getWritableDatabase();
-        b=(Button)findViewById(R.id.search);
-        b1=(Button)findViewById(R.id.back);
-        b.setOnClickListener(new View.OnClickListener() {
+        b1=(Button)findViewById(R.id.search);
+        b2=(Button)findViewById(R.id.edit);
+        b3=(Button)findViewById(R.id.delete);
+        b4=(Button)findViewById(R.id.back);
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 s1 = ed1.getText().toString();
@@ -61,10 +63,24 @@ public class BooksearchstdActivity extends AppCompatActivity {
                 }
             }
         });
-        b1.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),Studentlogin.class);
+                getbookid = ed1.getText().toString();
+                getbookauthor = ed3.getText().toString();
+                boolean status=bookHelper.UpdateData(getid,getbookid,getbookauthor);
+                if (status == true) {
+
+                    Toast.makeText(getApplicationContext(), "Successfully Updated", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),BooksearchActivity.class);
                 startActivity(i);
             }
         });

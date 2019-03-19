@@ -91,5 +91,25 @@ public class BookHelper extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery("SELECT * FROM "+TableName1+" WHERE "+col03+"='"+bookname+"'",null);
         return cursor;
     }
+    public boolean UpdateData(String id,String bookid,String bookauthor)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put(col02,bookid);
+        contentValues.put(col04,bookauthor);
+
+        long status=db.update(TableName,contentValues,col01+"="+id,null);
+        if (status==-1)
+        {
+            return false;
+
+        }
+        else
+        {
+            return true;
+        }
+
+
+    }
 }
 

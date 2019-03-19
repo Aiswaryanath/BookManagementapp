@@ -1,5 +1,6 @@
 package com.student.admin.bookmanagementapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,10 +11,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class BooksearchActivity extends AppCompatActivity {
-    Button b,b1,b2;
+    Button b,b3,b4;
     EditText ed1,ed2,ed3;
 //    Spinner sp;
-  String s1,s2,s3;
+  String s1,s2,s3,getid,getbookid,getbookauthor;
     BookHelper bookHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +27,10 @@ public class BooksearchActivity extends AppCompatActivity {
         bookHelper.getWritableDatabase();
 //        sp=(Spinner)findViewById(R.id.department);
         b=(Button)findViewById(R.id.submit);
-        b1=(Button)findViewById(R.id.edit);
-        b2=(Button)findViewById(R.id.delete);
+
+        b3=(Button)findViewById(R.id.back);
+        b4=(Button)findViewById(R.id.search);
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,17 +52,21 @@ public class BooksearchActivity extends AppCompatActivity {
 
             }
         });
-        b1.setOnClickListener(new View.OnClickListener() {
+
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
             }
         });
-        b2.setOnClickListener(new View.OnClickListener() {
+        b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i=new Intent(getApplicationContext(),AdminsearchActivity.class);
+                startActivity(i);
             }
         });
+
     }
 }

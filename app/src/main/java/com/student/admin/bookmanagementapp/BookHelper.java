@@ -98,7 +98,7 @@ public class BookHelper extends SQLiteOpenHelper {
         contentValues.put(col02,bookid);
         contentValues.put(col04,bookauthor);
 
-        long status=db.update(TableName,contentValues,col01+"="+id,null);
+        long status=db.update(TableName,contentValues,col01 +"="+id,null);
         if (status==-1)
         {
             return false;

@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:layout_height="match_parent"
-        android:background="#58b3bc"
+        android:background="#ffdde1"
         android:layout_width="match_parent"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android">
@@ -27,11 +27,19 @@
 
 
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="LOGIN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/login" />
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="REGISTER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

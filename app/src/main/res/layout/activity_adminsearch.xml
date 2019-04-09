@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:layout_height="match_parent"
-        android:background="#58b3bc"
+        android:background="#1565C0"
         android:layout_width="match_parent"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android">
@@ -17,6 +17,10 @@
             android:id="@+id/bookname"
             android:inputType="text"/>
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="SEARCH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,16 +57,29 @@
 
 
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="EDIT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edit" />
         <Button
+            android:layout_margin="15dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:background="@drawable/buttonstylings"
+
             android:text="REMOVE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/delete" />
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="BACK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

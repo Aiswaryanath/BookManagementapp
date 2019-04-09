@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:layout_height="match_parent"
-        android:background="#58b3bc"
+        android:background="#b92b27"
         android:layout_width="match_parent"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android">
@@ -44,17 +44,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"></Spinner>
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="SUBMIT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/submit" />
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="SEARCH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/search" />
 
         <Button
+            android:layout_margin="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/buttonstylings"
             android:text="BACK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

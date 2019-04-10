@@ -45,15 +45,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/bookauthor"
             android:inputType="text"/>
-        <TextView
-            android:text="BOOKSTATUS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Spinner
-            android:id="@+id/status"
-            android:entries="@array/bookstatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Spinner>
 
 
         <Button
@@ -64,7 +55,7 @@
             android:text="EDIT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edit" />
+            android:id="@+id/edit1" />
         <Button
             android:layout_margin="15dp"
         android:textColor="#FFFFFF"
@@ -85,12 +76,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/back" />
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
 
-            android:layout_gravity="center"
-            />
 
     </LinearLayout>
 </ScrollView>

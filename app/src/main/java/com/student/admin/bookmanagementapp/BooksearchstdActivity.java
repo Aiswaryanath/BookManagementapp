@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class BooksearchstdActivity extends AppCompatActivity {
     Button b,b1;
     EditText ed1,ed2,ed3;
-    String s1,s2,s3,s,getid;
+    String s1,s2,s3,getid;
     BookHelper bookHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

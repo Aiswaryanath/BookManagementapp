@@ -19,7 +19,7 @@
         <activity android:name=".StudentregisterActivity" />
         <activity android:name=".BooksearchActivity" />
         <activity android:name=".BooksearchstdActivity" />
-        <activity android:name=".AdminsearchActivity"></activity>
+        <activity android:name=".AdminActivity"></activity>
     </application>
 
 </manifest>

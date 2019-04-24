@@ -68,14 +68,14 @@ public class BookHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean insertData1(String bookid, String bookname, String bookauthor, String bookstatus) {
+    public boolean insertData1(String bookid, String bookname, String bookauthor) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(col02, bookid);
         cv.put(col03, bookname);
         cv.put(col04, bookauthor);
-        cv.put(col05,bookstatus);
-        long status = sqLiteDatabase.insert(TableName1, null, cv);
+
+        long status=sqLiteDatabase.insert(TableName1,null,cv);
         if (status == -1)
         {
             return false;
@@ -93,12 +93,12 @@ public class BookHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public boolean UpdateData(String id, String bookid, String bookauthor, String bookstatus) {
+    public boolean UpdateData(String id, String bookid, String bookauthor) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(col02, bookid);
         contentValues.put(col04, bookauthor);
-        contentValues.put(col05, bookstatus);
+
 
         long status = db.update(TableName1, contentValues, col01 + "=" + id, null);
         if (status == -1) {

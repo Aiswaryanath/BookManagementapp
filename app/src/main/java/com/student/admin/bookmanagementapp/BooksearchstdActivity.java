@@ -35,6 +35,7 @@ public class BooksearchstdActivity extends AppCompatActivity {
                 s1 = ed1.getText().toString();
                 s2 = ed2.getText().toString();
                 s3 = ed3.getText().toString();
+
                 Log.d("bookname", s1);
 
                 Cursor cursor = bookHelper.SearchData(s1);

@@ -1,8 +1,9 @@
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:layout_height="match_parent"
-        android:background="#1565C0"
+    <LinearLayout android:layout_height="wrap_content"
+
         android:layout_width="match_parent"
         android:orientation="vertical"
         xmlns:android="http://schemas.android.com/apk/res/android">
@@ -46,15 +47,7 @@
             android:id="@+id/bookauthor"
             android:inputType="text"/>
 
-        <TextView
-            android:text="BOOKSTATUS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookstatus"
-            android:inputType="text"/>
+
 
         <Button
             android:layout_margin="15dp"

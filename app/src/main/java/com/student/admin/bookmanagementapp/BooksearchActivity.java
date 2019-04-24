@@ -25,7 +25,7 @@ public class BooksearchActivity extends AppCompatActivity {
         ed3=(EditText)findViewById(R.id.bookauthor);
         bookHelper=new BookHelper(this);
         bookHelper.getWritableDatabase();
-        sp=(Spinner)findViewById(R.id.bookstatus);
+
         b=(Button)findViewById(R.id.submit);
 
         b4=(Button)findViewById(R.id.back);
@@ -37,12 +37,12 @@ public class BooksearchActivity extends AppCompatActivity {
                 s1=ed1.getText().toString();
                 s2=ed2.getText().toString();
                 s3=ed3.getText().toString();
-                s4=sp.getSelectedItem().toString();
+
                 Log.d("bookid",s1);
                 Log.d("bookname",s2);
                 Log.d("bookauthor",s3);
-                Log.d("BookStatus", s4);
-                boolean status=bookHelper.insertData1(s1,s2,s3,s4);
+
+                boolean status=bookHelper.insertData1(s1,s2,s3);
                 if (status == true) {
 
                     Toast.makeText(getApplicationContext(), "Successfully inserted", Toast.LENGTH_LONG).show();

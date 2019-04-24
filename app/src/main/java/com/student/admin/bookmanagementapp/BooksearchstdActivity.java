@@ -15,6 +15,7 @@ public class BooksearchstdActivity extends AppCompatActivity {
     Button b,b1;
     EditText ed1,ed2,ed3;
     String s1,s2,s3,getid;
+    Spinner s;
     BookHelper bookHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class BooksearchstdActivity extends AppCompatActivity {
         ed1=(EditText)findViewById(R.id.bookname);
         ed2=(EditText)findViewById(R.id.bookid);
         ed3=(EditText)findViewById(R.id.bookauthor);
+        s=(Spinner)findViewById(R.id.availablebooks);
         bookHelper=new BookHelper(this);
         bookHelper.getWritableDatabase();
         b=(Button)findViewById(R.id.search);

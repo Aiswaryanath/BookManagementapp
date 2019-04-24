@@ -9,4 +9,18 @@
         <item>available</item>
         <item>unavailable</item>
     </string-array>
+    <string-array name="availablebooks">
+        <item>DBMS 4TH EDITION</item>
+        <item>ADBMS 3RD EDITION</item>
+        <item>BIG DATA 6TH EDITION</item>
+        <item>MACHINE LEARNING 4TH EDITION</item>
+        <item>MOBILE COMPUTING 5TH EDITION</item>
+        <item>BIG DATA 2ND EDITION</item>
+        <item>C 1ST EDITION</item>
+        <item>CPP 4TH EDITION</item>
+        <item>COMPUTER NETWORKS 2ND EDITION</item>
+        <item>SOFTWARE ENGINEERING 3RD EDITION</item>
+        <item>PARALLEL PROCESSING 6TH EDITION</item>
+        <item>CLIENT SERVER 5TH EDITION</item>
+    </string-array>
 </resources>

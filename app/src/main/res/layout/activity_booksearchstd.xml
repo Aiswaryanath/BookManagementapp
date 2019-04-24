@@ -16,6 +16,11 @@
             android:id="@+id/bookname"
             android:inputType="text"/>
 
+        <Spinner
+            android:id="@+id/availablebooks"
+            android:entries="@array/availablebooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
         <Button
             android:layout_margin="15dp"
             android:textColor="#FFFFFF"
@@ -49,12 +54,6 @@
             android:text="BOOKSTATUS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <Spinner
-            android:visibility="invisible"
-            android:id="@+id/status"
-            android:entries="@array/bookstatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Spinner>
 
 
         <Button

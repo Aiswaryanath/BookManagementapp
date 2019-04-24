@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 <Spinner
-    android:id="@+id/status"
+    android:id="@+id/bookstatus"
     android:entries="@array/bookstatus"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"></Spinner>

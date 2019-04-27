@@ -13,9 +13,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
  public class AdminActivity extends AppCompatActivity {
-String getS1,getS2,getS3,getid,bookstatus,getnewS2;
+String getS1,getS2,getS3,getid,bookstatus,getnewS2,getnewS3;
      Button b1,b2,b3,b4;
-     EditText ed1,ed2,ed3,ed4;
+     EditText ed1,ed2,ed3;
      BookHelper bookHelper;
      AlertDialog.Builder builder;
      @Override
@@ -77,7 +77,7 @@ String getS1,getS2,getS3,getid,bookstatus,getnewS2;
 
                          Toast.makeText(getApplicationContext(), getS2, Toast.LENGTH_LONG).show();
                          Toast.makeText(getApplicationContext(), getS3, Toast.LENGTH_LONG).show();
-                         Toast.makeText(getApplicationContext(), bookstatus, Toast.LENGTH_LONG).show();
+
                          ed2.setText(getS2);
                          ed3.setText(getS3);
 
@@ -98,9 +98,9 @@ String getS1,getS2,getS3,getid,bookstatus,getnewS2;
              @Override
              public void onClick(View view) {
                  getnewS2 = ed2.getText().toString();
+                 getnewS3 = ed3.getText().toString();
 
-                 bookstatus=ed4.getText().toString();
-                 boolean status = bookHelper.UpdateData(getid,getnewS2,bookstatus);
+                 boolean status = bookHelper.UpdateData(getid,getnewS2,getnewS3);
                  if (status==true)
                  {
                      Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
